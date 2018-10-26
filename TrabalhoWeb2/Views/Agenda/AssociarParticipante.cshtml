@@ -1,0 +1,79 @@
+﻿@model TrabalhoWeb2.WSAula.Agenda
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Associar Participante</title>
+    <link href="~/Media/Css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <main class="main">
+        <div class="area-titulo">
+            <h1 class="titulo">Cadastro de Compromisso</h1>
+        </div>
+        <span class="msg">
+            <p>@Html.ViewBag.MsgErro</p>
+            <p>@Html.ViewBag.Msg</p>
+        </span>
+        <section class="form">
+            <form action="" method="post" id="formulario">
+
+                @Html.HiddenFor(n => n.AgendaId)
+                @Html.HiddenFor(n => n.UsuarioId)
+
+                <fieldset>
+                    <section class="form-group">
+                        <div class="form-item">
+                            @Html.TextBoxFor(n => n.Titulo, null, new { @class = "form-control", Autofocus = "true", @readonly = "true", required = "true", pattern = "[A-Za-z].{3,}", title = "Digite o título de seu compromisso!." })
+                            @Html.LabelFor(n => n.Titulo, new { @class = "label-float" })
+                        </div>
+                        <div class="form-item">
+                            @Html.TextBoxFor(n => n.DataCompromisso, null, new { @class = "form-control", @readonly = "true", type = "date", required = "true", title = "Digite a data de seu compromisso!." })
+                            @Html.LabelFor(n => n.DataCompromisso, new { @class = "label-float" })
+                        </div>
+                        <div class="form-item">
+                            @Html.TextAreaFor(n => n.Descricao, new { @class = "form-control inputarea", @readonly = "true", required = "true", title = "Digite a descriçao de seu compromisso aqui!." })
+                            @Html.LabelFor(n => n.Descricao, new { @class = "label-float" })
+                        </div>
+                        <div class="form-item">
+                            <select id="lstUsuario" class="form-control"></select>
+                            @Html.Label("Participante", new { @class = "label-float" })
+                        </div>
+
+                        <span id="carregando"></span>
+
+
+                        <div class="box-participante">
+                            <h2 class="title-form">Participantes</h2>
+
+                            <div id="tdBody" class="campo-lista"></div>
+
+                        </div>
+
+                        <button class="botao" id="btnAdicionar" type="button">Adicionar Participante</button>
+                        <button class="botao" id="btnRemover" type="button">Remover Participante</button>
+                        <span class="float-link">
+                            @Html.ActionLink("« Voltar", "ListarCompromissos", null, new { @class = "link" })
+                        </span>
+                    </section>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <!-- Arquivos JavaScript -->
+    @if (false)
+    {
+        <script src="~/Media/Script/jquery-2.1.4-vsdoc.js" defer></script>
+    }
+    <script src="~/Media/Script/jquery-2.1.4.min.js" defer></script>
+    <script src="~/Media/Script/cadastrocompromisso.js" defer></script>
+    <script src="~/Media/Script/exibirparticipantes.js" defer></script>
+
+</body>
+</html>

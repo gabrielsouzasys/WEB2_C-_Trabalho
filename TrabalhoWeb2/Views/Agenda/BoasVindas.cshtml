@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>BoasVindas</title>
+    <link href="~/Media/Css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <main class="box main">
+        <header class="area-titulo">
+            <ul class="header-link">
+                <li class="titulo-link">
+                    <a href="/Agenda/CadastrarCompromisso">Cadastrar Compromisso</a>
+                </li>
+                <li class="titulo-link">
+                    <a href="/Agenda/ListarCompromissos">Listar Compromissos</a>
+                </li>
+                <li class="titulo-link">
+                    <a href="/Home/Index">Sair</a>
+                </li>
+            </ul>
+        </header>
+        <section class="area-texto">
+            <span class="msg">
+                <p>@Html.ViewBag.MsgErro</p>
+                <p>@Html.ViewBag.Msg</p>
+            </span>
+            <h1 class="bg-title">Seja Bem Vindo!</h1>
+            <div class="lista-msg">
+                <ul id="retornoLista" class="lista-msg"></ul>               
+            </div>
+        </section>
+    </main>
+
+    <!-- Arquivos JavaScript -->
+    @if (false)
+    {
+        <script src="~/Media/Script/jquery-2.1.4-vsdoc.js" defer></script>
+    }
+    <script src="~/Media/Script/jquery-2.1.4.min.js"></script>
+    <script src="~/Media/Script/exbircompromissos.js" defer></script>
+</body>
+</html>

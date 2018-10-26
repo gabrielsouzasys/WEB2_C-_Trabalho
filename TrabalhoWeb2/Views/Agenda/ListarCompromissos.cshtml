@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ListarCompromissos</title>
+    <link href="~/Media/Css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <main class="box main">
+        <header class="area-titulo">
+            <h1 class="titulo">Compromissos</h1>
+        </header>
+        <section class="area-texto">
+            <span class="msg">
+                <p>@Html.ViewBag.MsgErro</p>
+                <p>@Html.ViewBag.Msg</p>
+            </span>
+            <div class="lista-msg">
+                <ul id="retornoLista" class="lista-msg"></ul>
+            </div>
+        </section>
+        <footer class="rodape">
+            <span class="float-link">
+                @Html.ActionLink("Voltar", "BoasVindas", null, new { @class = "link" })
+            </span>
+        </footer>
+    </main>
+
+    <!-- Arquivos JavaScript -->
+    @if (false)
+    {
+        <script src="~/Media/Script/jquery-2.1.4-vsdoc.js" defer></script>
+    }
+    <script src="~/Media/Script/jquery-2.1.4.min.js"></script>
+    <script src="~/Media/Script/exbircompromissos.js" defer></script>
+</body>
+</html>

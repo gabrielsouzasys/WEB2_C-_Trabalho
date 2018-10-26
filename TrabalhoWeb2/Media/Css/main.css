@@ -1,0 +1,271 @@
+﻿* {
+    color: #000;
+    font-family: Helvetica;
+    font-size: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.area-titulo {
+    background-color: #4b77be;
+    border-bottom: 0.25em solid #446cb3;
+    margin: 0 auto;
+    padding-bottom: 0.75em;
+    padding-top: 0.75em;
+    width: 100%;
+}
+
+.titulo {
+    color: #fff;
+    font-size: 1.75em;
+    text-align: center;
+}
+
+.main {
+    background-color: #eee;
+    display: block;
+    height: auto;
+    margin: 5em auto;
+    width: 55em;
+}
+
+fieldset {
+    border: 0;
+}
+
+.form {
+    margin: 1em auto;
+    width: 50em;
+}
+
+.form-group {
+    margin-top: 1em;
+}
+
+.form-item {
+    margin-bottom: 1.25em;
+    max-width: none;
+    position: relative;
+}
+
+.form-control {
+    box-sizing: border-box;
+    border-radius: 0.15em;
+    border: 0.1em solid #999;
+    color: #333333;
+    font-size: 1em;
+    display: block;
+    height: 3em;
+    padding: 1.5em 1.5em 0;
+    width: 100%;
+}
+
+    .form-control:focus {
+        border-color: #428bca;
+    }
+
+.label-float {
+    color: #999;
+    position: absolute;
+    top: 0;
+    line-height: 1.75em;
+    padding: 0.75em 1.5em;
+    -webkit-transition: line-height linear 0.2s;
+    transition: line-height linear 0.2s;
+    cursor: text;
+}
+
+.form-control:focus + .label-float,
+.form-control:read-only + .label-float,
+.form-control:valid + .label-float {
+    color: #999;
+    font-size: 0.75em;
+    line-height: 1.5;
+    padding: 0 1.5em;
+}
+
+.inputarea {
+    height: 20em;
+    max-width: 50em;
+}
+
+.botao {
+    background-color: #4b77be;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.25em;
+    margin-bottom: 1.25em;
+    margin-top: 0.25em;
+    padding: 0.5em 1.75em;
+}
+
+    .botao:focus,
+    .botao:hover {
+        background-color: #1e8bc3;
+    }
+
+.float-link {
+    float: right;
+    margin-top: 1em;
+}
+
+.link {
+    color: #4b77be;
+    font-weight: bold;
+}
+
+    .link:focus,
+    .link:hover {
+        color: #1e8bc3;
+    }
+
+.bg-title {
+    color: #446cb3;
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.lista-msg {
+    display: flex;
+    flex-flow: row wrap;    
+    text-align: justify;
+}
+
+.bloco-participantes {
+    clear: both;
+}
+
+.lista-compromisso {
+    background-color: #fff;
+    border: 0.1em solid #333;
+    border-radius: 0.35em;    
+    box-sizing: border-box;
+    height: auto;
+    margin: 0.5em;    
+    padding: 2.5em 1em;
+    position: relative;
+    width: 15em;
+}
+
+.lista-participante {
+    background-color: #ccc;
+    border: 0.15px solid #000;
+    border-radius: 0.75em;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 0.25em;
+    margin-top: 0.5em;
+    padding: 0.15em 0.5em; 
+    text-align: center;
+}
+
+.lista-titulo {
+    display: inline-block;
+    margin-top: 0.5em;
+}
+
+.box {
+    border: 0.1em solid #999;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.4);
+    display: block;
+    margin: 2em auto;
+    min-height: 40em;
+    position: relative;
+    width: 800px;
+}
+
+.area-texto {
+    padding: 1em;
+}
+
+.header-link {
+    display: flex;
+    font-size: 1.5em;
+    font-weight: bolder;
+    justify-content: space-around;
+}
+
+.titulo-link {
+    align-self: flex-end;
+    cursor: pointer;
+    list-style: none;
+}
+
+    .titulo-link a {
+        color: #fff;
+        padding: 0.75em;
+    }
+
+        .titulo-link a:focus,
+        .titulo-link a:hover {
+            color: #eee;
+        }
+
+.msg {
+    margin: 2em;
+    color: #446cb3;
+    font-weight: bold;
+}
+
+    .msg p {
+        color: #446cb3;
+        margin-left: 1.5em;
+    }
+
+.rodape {
+    bottom: 0.5em;
+    font-size: 1.25em;
+    left: 49%;
+    margin-top: 2em;
+    padding-top: 1em;
+    position: absolute;
+}
+
+.link-topo {
+    background-color: #4b77be;    
+    font-size: 1em;
+    left: -0.1em;
+    padding: 0.35em;
+    position: absolute;
+    text-align: center;
+    top: -0.1em;
+    width: 97%;
+}
+
+.link-topo a {
+    color: #fff;
+}
+
+.link-topo a:focus,
+.link-topo a:hover {
+    color: #eee;
+}
+
+.box-participante {
+    background-color: #fff;
+    border: 0.1em solid #999;
+    min-height: 3em;
+    margin: 2.5em 0;
+    padding-bottom: 0.5em;
+    padding-left: 1.5em;
+    position: relative;
+}
+
+.title-form {
+    color: #999;
+    font-size: 0.75em;
+    font-weight: 500;
+    left: 0.5em;
+    line-height: 1.5;
+    padding: 0 1.5em;
+    position: absolute;
+}
+
+.campo-lista {
+    bottom: 0.5em; 
+    position: absolute;
+}
